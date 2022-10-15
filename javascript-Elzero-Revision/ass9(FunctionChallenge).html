@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Function - Random Argument Challenge
+            ====================================
+            Create Function showDetails
+            Function Accept 3 Parameters [a, b, c]
+            Data Types For Info Is
+            - String => Name
+            - Number => Age
+            - Boolean => Status
+            Argument Is Random
+            Data Is Not Sorted Output Depend On Data Types
+            - Use Ternary Conditional Operator
+        */
+
+        function showDetails(...info){
+            let name , age , available;
+           //if( typeof info[0]==="string"){
+             //   name=info[0]
+           ///}
+           for(let i=0 ; i<info.length ; i++){
+            if(typeof info[i] === "string"){
+                name=info[i]
+            }
+            if(typeof info[i] === "number"){
+                age=info[i]
+            }
+            if(typeof info[i] === "boolean"){
+                available=info[i] 
+                available= available ? "you are available for hire" : "you are Not available for hire"
+            }
+           }
+            console.log(`hello ${name} , my age is ${age} ,  ${available}`) // hello osama , my age is , you are available for hire
+        }
+
+        showDetails("Shabah" , 56 , true ) // hello Shabah , my age is 56 ,  you are available for hire
+        showDetails( 56 ,"Shabah" , true) // hello Shabah , my age is 56 ,  you are available for hire
+        showDetails(false , 56 ,"Shabah") // hello Shabah , my age is 56 ,  you are Not available for hire
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+        // Beginning at the end of 'a', insert 'b' after every 3rd character of 'a'
+        let ModArr =[]
+        let secArr=[]
+        //reverseArr=[]
+        resultArr=[]
+function myFunction(str,separate_char)
+{
+    ModArr.push(str.substr(0,str.length%3))
+    for(let i=3; i<str.length;i+=3){
+        
+        secArr.push(str.substr(-i,3))
+        //console.log(newstr)
+    }
+    //reverseArr=secArr.reverse();
+    resultArr = ModArr.concat(secArr.reverse())
+    //console.log(resultArr.join(separate_char))
+
+    return resultArr.join(separate_char)
+}
+
+console.log(myFunction('zxyzxyzxyzxyzxyz','w'))
+
+    </script>
+</body>
+</html>

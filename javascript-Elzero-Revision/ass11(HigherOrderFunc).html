@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1st Way To solution 
+
+        /*let myString = "1,2,3,EE,l,z,e,r,o,_,w,e,b,_,s,c,h,o,o,l,2,0,z"
+
+        let solution =myString.split(",").filter(function(el){
+            return isNaN(el) 
+        }).reduce(function(acc,current){
+            return acc + current
+        }).replace(/_/g, " ").slice(1,this.length-1)
+        console.log(solution) // Elzero web school*/
+
+        // 2nd way To solution
+        let myString = "1,2,3,EE,l,z,e,r,o,_,w,e,b,_,s,c,h,o,o,l,2,0,z"
+
+        let solution =myString.split(",").filter(function(el){
+            return isNaN(el) 
+        }).map(function(el){
+            return el.replace("_" ," ")
+        }).reduce(function(acc,current){
+            return acc + current
+        }).slice(1,this.length-1)
+        console.log(solution) // Elzero web school
+    </script>
+</body>
+</html>

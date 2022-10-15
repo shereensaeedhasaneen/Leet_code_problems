@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove duplicate word from string</title>
+</head>
+<body>
+    <script>
+        function removeDuplicateWord(str){
+            let arr = str.split(" ");
+            let result_arr=[]
+        
+            for(let i=0 ; i<arr.length ; i++){
+                if(result_arr.indexOf(arr[i]) !== -1){ // يعني لو  موجود قبل كدا في الليست التانيه
+                    continue;
+                }
+                else{
+                    result_arr.push(arr[i])
+                }
+                
+            }
+            return result_arr.join(" ")
+        }
+        console.log(removeDuplicateWord("Hello Elzero web web Hello School"))
+        console.log(removeDuplicateWord("Hi shereen shereen saeed shereen saeed"))
+    </script>
+
+    <script>
+        function removeDuplicateWord(str){
+            let arr = str.split(" ");
+            let result_arr=[]
+
+           
+            for(let i=0 ; i<arr.length ; i++){
+                if(result_arr.indexOf(arr[i]) === -1){ // يعني لو مش موجود قبل كدا في الليست التانيه
+                    result_arr.push(arr[i])
+                }
+                
+            }
+            return result_arr.join(" ")
+        }
+        console.log(removeDuplicateWord("Hello Elzero web web Hello School"))
+        console.log(removeDuplicateWord("Hi shereen shereen saeed shereen saeed"))
+    </script>
+
+    <script>
+        function removeDuplicateWord(str){
+            let arr = str.split(" ");
+            console.log(arr);
+
+            let result_arr=new Set(arr) //   فيه اوبجيكت بترجع unique values
+            console.log(result_arr)
+          
+            /*let convertSetToArray = [...result_arr]
+            console.log(convertSetToArray)
+           return convertSetToArray.join(" ")*/
+
+           ///////// OR /////////////////
+
+           let convertSetToArray =Array.from(result_arr)
+            console.log(convertSetToArray)
+           return convertSetToArray.join(" ")
+
+        }
+        console.log(removeDuplicateWord("Hello Elzero web web Hello School"))
+        console.log(removeDuplicateWord("Hi shereen shereen saeed shereen saeed"))
+    </script>
+
+    <script>
+        function removeDuplicateWord(str){
+           
+           return [...new Set(str.split(" "))].join(" ")
+
+        }
+        console.log(removeDuplicateWord("Hello Elzero web web Hello School"))
+        console.log(removeDuplicateWord("Hi shereen shereen saeed shereen saeed"))
+    </script>
+
+</body>
+</html>

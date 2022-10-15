@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Missing Letters inside String</title>
+</head>
+<body>
+    <script>
+
+     // First Way 
+    function findMissingLetters(str){
+            let arr=str.split("")   // convert string to array
+            let num = str[0].charCodeAt(0); // character Code for 1st element
+            // حرف ال a  بيبقي 97
+            // مكتبتش 97 ستاتيك عشان الاسترينج ممكن يبدأ باي حرف غير حرف ال a
+            let index=0;
+    
+            for(let ch of arr){
+            
+                if(ch.charCodeAt(0) !== num) 
+                    {
+                    arr.splice(index , 0 ,String.fromCharCode(num)) // add missing items to array
+                    }
+                num++;
+                index++;
+            }
+    return arr.join("")
+}
+
+console.log(findMissingLetters("abcdghi"))
+console.log(findMissingLetters("defgi"))
+console.log(findMissingLetters("xyz"))
+
+    </script>
+
+    <script>
+        // Second way
+        function findMissingLetters(givenString){
+            let alpha = "abcdefghijklmnopqrstwvrxyz";
+            let start = alpha.indexOf(givenString[0])
+           // console.log(start)
+            for(let i = 0 ; i<givenString.length ; i++){
+                // console.log(givenString[i]);
+                // console.log(alpha[start+i])
+                // console.log('##############')
+                if(givenString[i] !== alpha[start + i]){
+                    return alpha[start+i]
+                }
+            }
+            return "No Missing Letters in Sequence";
+        }
+        console.log(findMissingLetters("abcdghi"))
+        console.log(findMissingLetters("defgi"))
+        console.log(findMissingLetters("xyz"))
+    </script>
+</body>
+</html>

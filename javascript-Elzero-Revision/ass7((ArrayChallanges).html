@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let zero = 0;
+        let counter = 3;
+        let reverseArr =[]
+        let arr =["Ahmed" , "Mazero" , "Elham" , "Osama" , "Gamal" , "Ameer"];
+       reverseArr = arr.reverse();
+       newArr = reverseArr.splice(2)
+       arr = newArr
+       console.log( arr) //['Osama', 'Elham', 'Mazero', 'Ahmed']
+
+       sliceArr = arr.slice(zero , counter);
+       newArr_After_Shift = sliceArr.sort().splice(zero ,2)
+       console.log(newArr_After_Shift) // ["Elham" , "Mazero"]
+
+       Elzero_Word = `${newArr_After_Shift[0][0]}${newArr_After_Shift[0][1]}${newArr_After_Shift[1].slice(newArr_After_Shift.length)}`;
+       console.log(Elzero_Word) // Elzero
+
+       console.log( Elzero_Word.charAt(4) + Elzero_Word.charAt(5).toUpperCase()) // "rO"
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    // FizzBuzz problem 
+    // لو الرقم اللي داخل بيقبل القسمه علي 3 هيعرض Fizz
+    //  لو الرقم اللي داخل بيقبل القسمه علي 5 هيعرض Buzz
+    // لو الرقم اللي داخل بيقبل القسمه علي ال 5 و ال 3 هيعرض fizzBuzz
+    let n=15;
+    for(let i=1;i<=n;i++){
+        if(i%3==0 && i%5==0){
+            document.write("FizzBuzz")
+            document.write('<br>')
+        }
+        else if(i%3==0 && i%5!=0){
+            document.write("Fizz")
+            document.write('<br>')
+        }
+        else if(i%5==0 && i%3!=0){
+            document.write("Buzz")
+            document.write('<br>')
+        }
+        else{
+            document.write(i)
+            document.write('<br>')
+        }
+    }
+</script>
+</body>
+</html>

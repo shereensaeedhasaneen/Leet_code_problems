@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Array of Number</title>
+</head>
+<body>
+    <script>
+        function reversedArr(str){
+            let arr =str.toString().split("")
+            let newArr=[]
+            //########## First Way #########
+                // for(let i =0 ; i<arr.length;i++){
+                //     newArr.push(+arr[i])
+                // }
+
+            //########## Second Way ########
+            arr = arr.map(function(el){
+                return +el
+            })
+
+            // first way return
+            //return newArr.reverse()
+
+            // second way return
+            return arr.reverse()
+        }
+        console.log(reversedArr(564987654))
+        console.log(reversedArr(529132)) // [2,3,1,9,2,5]
+    </script>
+
+    <script>
+        // onother solution in one line
+        function reversedArr(n){
+        return n.toString().split("").map(x=>+x).reverse();
+        }
+        console.log(reversedArr(564987654))
+        console.log(reversedArr(529132)) // [2,3,1,9,2,5]
+    </script>
+
+    <script>
+
+        // Another solution with (unshift) rather than (push)
+        function reversedArr(str){
+            let arr =str.toString().split("")
+            let newArr=[]
+        
+                for(let i =0 ; i<arr.length;i++){
+                    newArr.unshift(+arr[i])
+                }
+
+            return newArr
+        }
+        console.log(reversedArr(564987654))
+        console.log(reversedArr(529132)) // [2,3,1,9,2,5]
+    </script>
+
+</body>
+</html>

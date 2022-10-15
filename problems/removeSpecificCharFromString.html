@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove Specific Char From String</title>
+</head>
+<body>
+    <script>
+        function removeCharFromString(str,ch){
+            /*ch = ch.toUpperCase() || ch.toLowerCase()
+            return str.replaceAll(ch , "")*/
+            //console.log(ch.charCodeAt(0))
+            let res=[]
+            for(let i =0 ; i<str.length ; i++){
+                if(str[i].charCodeAt(0)!== ch.charCodeAt(0) && ch!==str[i].toLowerCase()){
+                    res.push(str[i])
+                }
+            }
+            return res.join("")
+        }
+        console.log(removeCharFromString("ElddzeroD webDD ddSchool" , "d"))
+        console.log(removeCharFromString("ElxzeroX web Sxchool" , "x"))
+        console.log(removeCharFromString("Elzero@ web@@ @@School" , "@"))
+    </script>
+
+    <script>
+        function removeCharFromString(str,ch){
+            return str.split("").filter(character=>{
+                return character !== ch.toLowerCase() && character !== ch.toUpperCase()
+            }).join("")
+        }
+        console.log("###############################");
+        console.log(removeCharFromString("ElddzeroD webDD ddSchool" , "d"));
+        console.log(removeCharFromString("ElxzeroX web Sxchool" , "x"));
+        console.log(removeCharFromString("Elzero@ web@@ @@School" , "@"));
+    </script>
+
+    <script>
+        function removeCharFromString(str,ch){
+           // return str.replace(/#ch#/gi , "")
+           let re = new RegExp(ch,"gi") // i for sesitive LowerCase and UpperCase
+           return str.replace(re,"")
+        }
+        console.log("###############################");
+        console.log(removeCharFromString("ElddzeroD webDD ddSchool" , "d"));
+        console.log(removeCharFromString("ElxzeroX web Sxchool" , "x"));
+        console.log(removeCharFromString("Elzero@ web@@ @@School" , "@"));
+    </script>
+</body>
+</html>

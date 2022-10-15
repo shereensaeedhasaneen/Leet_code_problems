@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Q1 
+        // regular function
+        let names = function(...arr){
+            return `String [${arr.join("] , [")}] => Done`
+            
+        }
+        console.log(names("shereen" , "saeed" ,"reham"))
+
+         // Arrow function
+
+         let namesArrow = (...arr) =>  `String [${arr.join("] , [")}] => Done`;
+        
+        console.log(namesArrow("shereen" , "saeed" ,"reham"))
+
+        // Q2 
+
+        // Arrow function
+        let myNumbers = [20 , 50 , 10 , 60]
+        let calc = (one , two , ...nums)=> one+two+nums[0]
+
+        console.log(calc(10,myNumbers[0] , myNumbers[1]))
+
+
+        /// Regular function
+        let calc_regular = function(one , two , ...nums){
+            return one+two+nums[0]
+        }
+
+        console.log(calc_regular(10,myNumbers[0] , myNumbers[1]))
+    </script>
+</body>
+</html>

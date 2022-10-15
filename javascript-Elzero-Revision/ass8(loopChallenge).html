@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myAdmins = ["Ahmed" , "Osama" , "Sayed" , "Stop" , "Samera" ];
+        let myEmployees = ["Amgad" , "Samah" ,"Ameer" , "Omar", "Othman" , "Amany" , "Samia" , "Anwar"];
+        let filterArr=[]
+        document.write(` <div>We Have ${myAdmins.length} Admins </div>`)
+        document.write(`<hr>`)
+
+        for(let i = 0 ; i<myAdmins.length ;i++){
+            document.write(`the Admin of team ${i+1} is ${myAdmins[i]}`)
+            document.write(`<h3> Team Members: </h3>`)
+            for(let j=0 ; j<myEmployees.length;j++){
+                if(myAdmins[i].charAt(0) === myEmployees[j].charAt(0)){
+                    filterArr.push(myEmployees[j])
+                }
+            }
+
+            for(let k =0 ; k<filterArr.length ; k++){
+                document.write(`<p> - ${k+1} ${filterArr[k]} </p>`)
+            }
+            document.write(`<hr>`)
+            filterArr=[]
+        }
+    
+    </script>
+</body>
+</html>

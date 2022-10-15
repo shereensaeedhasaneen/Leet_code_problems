@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Commas And UnderScore</title>
+</head>
+<body>
+
+    <script>
+        function addCommaAndUnderScore(num){
+            /*let ArabicNumbers= num.toLocaleString("ar-EG")
+            console.log(ArabicNumbers)*/
+            let result= num.toLocaleString()
+            //convert To Array
+            result = result.split("") // انا عايزه الكوما معاهم
+            console.log(result.length-4) // comma
+
+            // update  the last comma value
+            result[result.length -4 ] = "_";
+            // conver to string
+            result=result.join("")
+            return result;
+        }
+        console.log(addCommaAndUnderScore(120510650)) //120,510_650
+    </script>
+    
+</body>
+</html>

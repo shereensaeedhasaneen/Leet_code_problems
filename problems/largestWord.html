@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find largest word inside string</title>
+</head>
+<body>
+    <script>
+        function getLargestWord(str){
+                let arr = str.split(" ").reduce((acc , current)=>{
+                    return acc.length > current.length ? acc : current
+                })
+            return arr
+        }
+
+        console.log(getLargestWord("in programming we love Elzero Academy toooooooooooooooooooooooooooooo Much"))
+    </script>
+
+<script>
+    // another solution
+    function getLargestWord(str){
+        let arr= str.split(" ")
+        let longestLen=0;
+        let longestWord;
+
+        for(let i=0;i<arr.length ; i++){
+            if(arr[i].length > longestLen){
+                longestLen=arr[i].length;
+                longestWord=arr[i];
+            }
+        }
+        return longestWord
+    }
+
+    console.log(getLargestWord("in programming we love Elzero Academy toooooooooooooooooooooooooooooo Much"))
+</script>
+</body>
+</html>
