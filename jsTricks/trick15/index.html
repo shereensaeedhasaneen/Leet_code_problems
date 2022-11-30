@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Difference in Arrays
+        function ArrayDiff(a,b){
+            const setX=[...new Set(a)]
+            const setY=[...new Set(b)]
+            return [
+                /* 
+                    دا كدا هترجع 
+                    [ [6], [4,5]]
+                    a.filter(y=>!setY.includes(y)),
+                    b.filter(x=>!setX.includes(x))
+                */
+
+                /*
+                لكن كدا هترجع اراي في بعضها
+                [6,4,5]
+                */
+                ...a.filter(y=>!setY.includes(y)),
+                ...b.filter(x=>!setX.includes(x))
+
+            ]
+        }
+        console.log(ArrayDiff([1,2,3,6],[1,2,3,4,5]))
+    </script>
+</body>
+</html>

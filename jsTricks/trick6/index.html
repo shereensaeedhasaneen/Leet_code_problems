@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const cars = [
+            { make: 'Opel', class: 'Regular' },
+            { make: 'Bugatti', class: 'Supercar' },
+            { make: 'Ferrari', class: 'Supercar' },
+            { make: 'Ford', class: 'Regular' },
+            { make: 'Honda', class: 'Regular' },
+        ]
+        const supercar = cars.filter(car => car.class === 'Supercar');
+        console.table(supercar); // returns the supercar class data in a table format
+    
+        //You can also use filter() together with Boolean 
+        //to remove all (null) or (undefined) values from your array.
+        const cars2 = [
+            { make: 'Opel', class: 'Regular' },
+            null,
+            undefined
+          ]
+          
+        const supercar2= cars2.filter(Boolean); // returns [{ make: 'Opel', class: 'Regular' }] 
+        console.table(supercar2)
+
+        ////////////////////////////////
+        /*
+         How to Check if an Object Has Values
+        */
+        console.log(Object.keys(cars).length)
+    </script>
+</body>
+</html>

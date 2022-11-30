@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // First Example
+        //console.log(x) // undefiened becose js make hoisting to variable declaration only not it's value
+        //var x=3;
+
+
+        // Second Example
+        /*console.log(hello()) // hi => becouse js make hoisting to functions and variables
+        function hello(){
+            return 'hi'
+        }*/
+
+
+        // Third Example
+
+        console.log(hello_func) // undefiend such first example
+        //console.log(hello_func()) // Error , hello_func is not a function
+        var hello_func = function(){
+            return 'welcome'
+        }
+
+        console.log(hello_func()) // welcome => becouse  console.log after variable 
+        // then the compiler see that hello_func is function 
+        // but ,   console.log before variable the compiler see that hello_func is undefiened
+
+    </script>
+</body>
+</html>

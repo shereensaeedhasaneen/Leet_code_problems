@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Shortening Console Log
+        //example 1
+        var c = console.log.bind(document)
+        c(2*4)
+        c("Hello to JavaScript")
+        c(true)
+        //example 2
+        var cl = console.log.bind(document)
+        cl("JavaScript Developer")
+        cl(6*3*2) 
+        cl(false)
+    </script>
+</body>
+</html>

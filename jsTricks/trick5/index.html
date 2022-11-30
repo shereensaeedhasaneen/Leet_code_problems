@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let list1 = ['a', 'b', 'c', 'd', 'e'];
+        let list2 = ['f', 'g', 'h', 'i', 'j'];
+        //list1=list1.concat(list2)
+        console.log(list1.concat(list2)); // returns the merged values of both arrays, ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+        console.log(list1)
+        console.log(list2)
+        // concat method return result in a new array        
+        // no change list1 or list2
+
+        console.log(list1.push.apply(list1,list2)) // 10 print new length not array
+        console.log(list1) // ['a', 'b', 'c', 'd', 'e' , 'f', 'g', 'h', 'i', 'j' ]
+        console.log(list2) // ['f', 'g', 'h', 'i', 'j']
+         // push.apply method return result in a the same array        
+        // change list1 only with new concatenation 
+        // don't return result in new array
+    </script>
+</body>
+</html>
