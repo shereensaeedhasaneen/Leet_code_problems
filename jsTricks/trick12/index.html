@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Infinite function parameter
+        function fun(...data){
+        for(let i of data)
+        {
+            console.log(i) // 1 ,3, 4, 5, "shereen",true,12
+        }
+    }
+        fun(1 ,3, 4, 5, "shereen",true,12)
+
+        ////////// typeOf operator
+        // Operator TypeOf
+        let v1 = "JavaScript"
+        let v2 = true
+        let v3 = 234
+        let v4 = null
+        let v5 = undefined
+        console.log(typeof(v1)) // string
+        console.log(typeof(v2)) // boolean
+        console.log(typeof(v3)) // number
+        console.log(typeof(v4)) // object
+        console.log(typeof(undefined)) // object
+    </script>
+</body>
+</html>

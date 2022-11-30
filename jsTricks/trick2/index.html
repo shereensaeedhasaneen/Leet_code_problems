@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        price=undefined|null
+        // instead of
+        if (price) {
+            console.log(price);
+        }
+        else{
+            console.log('Getting the price')
+        }
+  
+        // use
+        //shortcut if condition
+        // ||(or) use when variable is null or undefiend
+        price || console.log("price=null")
+
+        /// Output 
+        /*
+            لو ب nullاو undefiend
+            هينفذ ال بعد العلامه دي
+            زي كانه بينفذ ال في ال else كدا
+        */
+    </script>
+</body>
+</html>

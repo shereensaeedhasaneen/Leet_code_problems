@@ -8,7 +8,7 @@ function addDigits(num) {
         console.log('on')
         //let i=0
         let sum=0
-       /* for(let i=0;i<ss.length;i++){
+        for(let i=0;i<ss.length;i++){
             sum+=(+ss[i])
             if(sum.toString().length==1){
                 break;
@@ -17,15 +17,9 @@ function addDigits(num) {
                 i=0
                 continue;
             }
-        }*/
-        let i=0
-        while(ss.length!=1){
-            console.log('j')
-            sum+=(+ss[i])
-            ss=sum
-            i++
         }
-        return ss
+        
+        return sum
     }
    
 };
